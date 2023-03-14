@@ -1,9 +1,9 @@
-package com.ccindor.challenge;
+package com.ccindor.challenge.Controller;
 
+import com.ccindor.challenge.Entity.Tareas;
+import com.ccindor.challenge.Service.TareasService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -19,5 +19,8 @@ public class TareasController {
     public List<Tareas> getTareas() {
         return tareasService.getTareas();
     }
-
+    @PostMapping("nueva")
+    public void registerNewTask(@RequestBody Tareas tareas){
+        tareasService.addNewTask(tareas);
+    }
 }

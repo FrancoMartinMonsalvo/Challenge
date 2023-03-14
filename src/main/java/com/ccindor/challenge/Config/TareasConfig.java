@@ -1,5 +1,7 @@
-package com.ccindor.challenge;
+package com.ccindor.challenge.Config;
 
+import com.ccindor.challenge.Entity.Tareas;
+import com.ccindor.challenge.Repository.TareasRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
