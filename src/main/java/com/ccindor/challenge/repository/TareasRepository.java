@@ -1,7 +1,6 @@
-package com.ccindor.challenge.Repository;
+package com.ccindor.challenge.repository;
 
-import com.ccindor.challenge.Entity.Tareas;
-import jakarta.persistence.criteria.CriteriaBuilder;
+import com.ccindor.challenge.entity.Tareas;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;

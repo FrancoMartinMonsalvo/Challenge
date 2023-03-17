@@ -1,4 +1,4 @@
-package com.ccindor.challenge.Entity;
+package com.ccindor.challenge.entity;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

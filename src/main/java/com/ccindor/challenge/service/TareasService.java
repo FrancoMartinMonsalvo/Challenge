@@ -1,7 +1,7 @@
-package com.ccindor.challenge.Service;
+package com.ccindor.challenge.service;
 
-import com.ccindor.challenge.Entity.Tareas;
-import com.ccindor.challenge.Repository.TareasRepository;
+import com.ccindor.challenge.entity.Tareas;
+import com.ccindor.challenge.repository.TareasRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -34,5 +34,13 @@ public class TareasService {
             return tareasRepository.save(tarea);
         }
         throw new IllegalStateException("Tarea no existe");
+    }
+
+    public void deleteTaskById(Long id) {
+        if (tareasRepository.findById(id).isPresent()){
+            tareasRepository.deleteById(id);
+            return;
+        }
+        throw new IllegalStateException("Esa tarea no existe");
     }
 }
